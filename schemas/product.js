@@ -19,9 +19,10 @@ let productSchema = mongoose.Schema({
     },imgURL:{
         type:String,
         default:""
-    },category:{
-        type:String,
-        required:true
+    },category: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'category',
+        required: true
     }
     ,isDeleted:{
         type:Boolean,
